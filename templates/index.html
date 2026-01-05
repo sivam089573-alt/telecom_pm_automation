@@ -1,0 +1,21 @@
+<form method="POST" action="/analyze-pm" enctype="multipart/form-data">
+
+    Site ID:<br>
+    <input type="text" name="site_id" required><br><br>
+
+    Upload PM Photo:<br>
+    <input type="file" name="photo" required><br><br>
+
+    Battery Voltage (V):<br>
+    <input type="number" name="battery_voltage" required><br><br>
+
+    DG Run Hours:<br>
+    <input type="number" name="dg_hours" required><br><br>
+
+    <button type="submit">Analyze PM</button>
+</form>
+
+{% if result %}
+<h3>Result:</h3>
+<p><b>{{ result }}</b></p>
+{% endif %}
